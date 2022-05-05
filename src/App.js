@@ -23,7 +23,7 @@ function App() {
     try {
       const start = selectedStartDt.toISOString().split('T')[0] + 'Z'
       const end = selectedEndDt.toISOString().split('T')[0] + 'Z'
-      var url = 'http://localhost:8081/convertToXML?' + 'from=' + start + '&to=' + end
+      var url = 'http://159.203.10.73/convertToXML?' + 'from=' + start + '&to=' + end
       const response = await fetch(url);
       const blob = await response.blob();
       download(blob, 'auto_generated.xml')
